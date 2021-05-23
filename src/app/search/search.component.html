@@ -1,0 +1,45 @@
+<!-- <p>search works!</p> -->
+<div class="container">
+  <div *ngIf= "search">
+   <div class="panel panel-default">
+       <div class="search heading">
+         <small>    {{search.login}}</small>
+         <br>
+         <span>    studies at {{search.company }} </span>
+     </div>
+   </div>
+  </div>
+    <img id="img" src ="https://avatars.githubusercontent.com/u/81696884?v=4" alt="">
+    <div class="panel-body">
+<div class="row">
+<div class="col-sm-5">
+<ul class="list-group">
+<li class="list-group-item" *ngIf="search.bio">{{search.bio}}</li>
+<li class="list-group-item" *ngIf="search.twitter_username">{{search.twitter_username}}</li>
+<li class="list-group-item" *ngIf="search.location">{{search.location}}</li>
+<li class="list-group-item" *ngIf="search.hireable">{{search.hireable}}</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+  <p>
+    <span class="label label-default">{{search.followers}} followers</span>
+    <span class="label label-primary">{{search.following}} following</span>
+    <span class="label label-secondary">{{search.public_gist}}</span>
+    <span class="label label-primary">{{search.public_repo}}</span>
+  </p>
+  <p>
+    <a href="profile.html url" target="blank" class="btn btn-success btn-sm">View profile on Github</a>
+  </p>
+  <div class="panel panel-default">
+   <div class="panel heading">
+       <div class="panel-title">repo</div>
+   </div>
+    <div class="panel-body" *ngFor="let repo of repo"></div>
+        <p>
+            {{repo.name}}
+            <a href="{{repo.html_url}} class btn btn warning pull-right"> view repo name</a>
+        </p>
+
