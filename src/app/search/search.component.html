@@ -4,6 +4,10 @@
    <div class="panel panel-default">
        <div class="search heading">
          <h4>GITHUB-SEARCH</h4>
+         <form (ngSubmit)='submitUsername()' >
+          <input type="text" name="username" class="form-control" placeholder="Enter your Username">
+          <button class="btn btn-outline-success btn-sm">Fetch Github Data</button>
+        </form>
 
          <small>    {{search.login}}</small>
          <br>
@@ -12,17 +16,20 @@
    </div>
   </div>
     <img id="img" src ="https://avatars.githubusercontent.com/u/81696884?v=4" alt="">
+
     <div class="panel-body">
+
+
 <div class="row">
 <div class="col-sm-5">
 <ol class="list-group">
 
-<li class="list-group-item" *ngIf="search.bio">{{search.bio}}</li>
-<li class="list-group-item" *ngIf="search.twitter_username">{{search.twitter_username}}</li>
-<li class="list-group-item" *ngIf="search.location">{{search.location}}</li>
-<li class="list-group-item" *ngIf="search.hireable">{{search.hireable}}</li>
-<li class="list-group-item" *ngIf="search.created_at">{{search.created_at}}</li>
-<li class="list-group-item" *ngIf="search.updated_at">{{search.updated_at}}</li>
+<p class="list-group-item" *ngIf="search.bio">{{search.bio}}</p>
+<p class="list-group-item" *ngIf="search.twitter_username">{{search.twitter_username}}</p>
+<p class="list-group-item" *ngIf="search.location">{{search.location}}</p>
+<p class="list-group-item" *ngIf="search.hireable">{{search.hireable}}</p>
+<p class="list-group-item" *ngIf="search.created_at">{{search.created_at}}</p>
+<p class="list-group-item" *ngIf="search.updated_at">{{search.updated_at}}</p>
 </ol>
 
 
