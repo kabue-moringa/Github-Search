@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  IPI: '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'
 };
 
 /*

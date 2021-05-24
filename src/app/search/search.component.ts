@@ -9,6 +9,7 @@ import { SearchService } from '../search.service';
 export class SearchComponent implements OnInit {
  search: any;
  repo: any;
+ username: string;
   constructor(private searchService: SearchService) {
     this.searchService.getSearchData().subscribe(search => {
       console.log(search);
@@ -23,8 +24,8 @@ export class SearchComponent implements OnInit {
       this.repo = _repo;
  });
 
-
   }
+
 // tslint:disable-next-line:variable-name
 
   // tslint:disable-next-line:typedef
