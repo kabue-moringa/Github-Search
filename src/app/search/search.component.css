@@ -9,3 +9,8 @@ h4{
 .col-sm-4{
 color: whitesmoke;
 }
+#large{
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
