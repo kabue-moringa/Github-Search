@@ -4,7 +4,6 @@
    <div class="panel panel-default">
        <div class="search heading">
          <h4>GITHUB-SEARCH</h4>
-         <large>{{search.name}}</large><br>
 
          <small>    {{search.login}}</small>
          <br>
@@ -16,15 +15,15 @@
     <div class="panel-body">
 <div class="row">
 <div class="col-sm-5">
-<ul class="list-group">
-  <li class="list-group-item" *ngIf="search.email">{{search.email}}</li>
+<ol class="list-group">
+
 <li class="list-group-item" *ngIf="search.bio">{{search.bio}}</li>
 <li class="list-group-item" *ngIf="search.twitter_username">{{search.twitter_username}}</li>
 <li class="list-group-item" *ngIf="search.location">{{search.location}}</li>
 <li class="list-group-item" *ngIf="search.hireable">{{search.hireable}}</li>
 <li class="list-group-item" *ngIf="search.created_at">{{search.created_at}}</li>
 <li class="list-group-item" *ngIf="search.updated_at">{{search.updated_at}}</li>
-</ul>
+</ol>
 
 
 </div>
