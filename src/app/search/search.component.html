@@ -1,19 +1,17 @@
-<!-- <p>search works!</p> -->
+
 <div class="container">
-  <div *ngIf= "search">
    <div class="panel panel-default">
        <div class="search heading">
          <h4>GITHUB-SEARCH</h4>
-         <form (ngSubmit)='submitUsername()'>
-          <input type="text" name="username" class="form-control" placeholder="Enter your Username">
-          <button class="btn btn-outline-success btn-sm">Fetch Github Data</button>
+         <form (ngSubmit)='userSubmit()'>
+          <input type="text" name="userName" class="form-control" placeholder="Enter your Username"[(ngModel)]=userName>
+          <button class="btn btn-outline-success btn-sm" type="submit">Fetch Github Data</button>
         </form>
-         <large id="large"> {{search.login}}</large>
          <br>
      </div>
    </div>
   </div>
-    <img id="img" src ="https://avatars.githubusercontent.com/u/81696884?v=4" alt="">
+    <img id="img" src ="{{search.avatar_url}}">
 
     <div class="panel-body">
 
@@ -28,8 +26,6 @@
 <p class="list-group-item" *ngIf="search.created_at">{{search.created_at}}</p>
 <p class="list-group-item" *ngIf="search.updated_at">{{search.updated_at}}</p>
 </ol>
-
-
 </div>
 </div>
 </div>
@@ -40,20 +36,6 @@
     <span class="label label-secondary">{{search.public_gist}}</span>
     <span class="label label-primary">{{search.public_repo}}</span>
   </p>
-  <p>
-    <a href="search.html url" target="blank" class="btn btn-success btn-sm">View profile on Github</a>
-  </p>
-  <div class="panel panel-default">
-   <div class="panel heading">
-       <div class="panel-title">repo</div>
-   </div>
-    <div class="panel-body" *ngFor="let repo of repo"></div>
-    <div class="click">
-        <p class="p">
-            {{repo.name}}
-            <a href="https://github.com/kabue-moringa">click to view repo </a>
-        </p>
       </div>
-  </div>
-</div>
+
 

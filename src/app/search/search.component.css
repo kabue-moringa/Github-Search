@@ -15,7 +15,11 @@ color: whitesmoke;
   font-size: large;
   font-weight: bold;
   color: white;
+
 }
 .p{
   color: chartreuse;
+}
+.click{
+  color: azure;
 }

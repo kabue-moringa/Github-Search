@@ -7,23 +7,18 @@ import { SearchService } from '../search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+ userName: string;
  search: any;
- repo: any;
- username: string;
+ getSearch: any;
   constructor(private searchService: SearchService) {
-    this.searchService.getSearchData().subscribe(search => {
-      console.log(search);
-     // tslint:disable-next-line:align
-     this.search = search;
     }
-
-    );
-    // tslint:disable-next-line:variable-name
-    this.searchService.getSearchData().subscribe((_repo: any) => {
-      console.log(_repo);
-      this.repo = _repo;
- });
-
+    // tslint:disable-next-line:typedef
+    userSubmit(){
+      console.log(this.userName);
+      this.searchService.getSearchData(this.userName).subscribe((search: any) => {
+        console.log(search);
+        this.search = search;
+      });
   }
 
 // tslint:disable-next-line:variable-name
