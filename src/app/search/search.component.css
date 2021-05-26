@@ -14,7 +14,7 @@ color: whitesmoke;
 form{
   align-items: center;
   text-align: center;
-  
+
 }
 #large{
   font-size: large;
@@ -27,4 +27,8 @@ form{
 }
 .click{
   color: azure;
+}
+img{
+  align-items: center;
+  margin-left: 500px;
 }

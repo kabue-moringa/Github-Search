@@ -3,6 +3,7 @@
    <div class="panel panel-default">
        <div class="search heading">
          <h4>GITHUB-SEARCH</h4>
+         <img id="img" src="/git.png" alt="">
          <form (ngSubmit)='userSubmit()'>
           <input type="text" name="userName" class="form-control" placeholder="Enter your Username"[(ngModel)]=userName>
           <button class="btn btn-outline-success btn-sm" type="submit">Fetch Github Data</button>
@@ -37,7 +38,7 @@
     <span class="label label-primary">{{search.public_repo}}</span>
   </p>
       </div>
-      <div class="panel panel-default">
+      <!-- <div class="panel panel-default">
         <div class="panel-heading">
 <div class="panel-tittle">repo</div>
         </div>
@@ -45,10 +46,10 @@
       <div class="panel-body"*ngfor="let repo of repo"></div>
       <p>
         {{repo.name}}
-        <a href="{{repo.html}} btn btn sm-btn warning pull-right"></a>
+        <a href="{{repo.html}} btn btn sm-btn warning pull-right"> click to view repo</a>
       </p>
       <p>
         {{repo.description}}
-      </p>
+      </p> -->
 
 
