@@ -37,5 +37,18 @@
     <span class="label label-primary">{{search.public_repo}}</span>
   </p>
       </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+<div class="panel-tittle">repo</div>
+        </div>
+      </div>
+      <div class="panel-body"*ngfor="let repo of repo"></div>
+      <p>
+        {{repo.name}}
+        <a href="{{repo.html}} btn btn sm-btn warning pull-right"></a>
+      </p>
+      <p>
+        {{repo.description}}
+      </p>
 
 

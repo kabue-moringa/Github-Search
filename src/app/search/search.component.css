@@ -11,6 +11,11 @@ h4{
 .col-sm-4{
 color: whitesmoke;
 }
+form{
+  align-items: center;
+  text-align: center;
+  
+}
 #large{
   font-size: large;
   font-weight: bold;
