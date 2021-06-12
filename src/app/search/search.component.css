@@ -16,6 +16,10 @@ form{
   text-align: center;
 
 }
+#sub{
+  display: inline;
+  align-items: center;
+}
 #large{
   font-size: large;
   font-weight: bold;
@@ -28,8 +32,4 @@ form{
 .click{
   color: azure;
 }
-img{
-  align-items: center;
-  margin-left: 4
-  00px;
-}
+

@@ -2,12 +2,16 @@
 <div class="container">
    <div class="panel panel-default">
        <div class="search heading">
+         <img src="/git.png" alt="">
          <h4>GITHUB-SEARCH</h4>
-         <img id="img" src="/git.png" alt="">
-         <form (ngSubmit)='userSubmit()'>
-          <input type="text" name="userName" class="form-control" placeholder="Enter your Username"[(ngModel)]=userName>
-          <button class="btn btn-outline-success btn-sm" type="submit">Fetch Github Data</button>
-        </form>
+         <img src="/git.png" alt="">
+         <div id="sub">
+          <form (ngSubmit)='userSubmit()'>
+            <input type="text" name="userName" class="form-control" placeholder="Enter your Username"[(ngModel)]=userName>
+            <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+          </form>
+         </div>
+
          <br>
      </div>
    </div>
@@ -35,21 +39,25 @@
     <span class="label label-default">{{search.followers}} followers</span><br>
     <span class="label label-primary">{{search.following}} following</span>
     <span class="label label-secondary">{{search.public_gist}}</span>
-    <span class="label label-primary">{{search.public_repo}}</span>
+    <span class="label label-primary">{{search.public_repos}}</span>
   </p>
       </div>
-      <!-- <div class="panel panel-default">
-        <div class="panel-heading">
-<div class="panel-tittle">repo</div>
+      <!-- <div *ngFor= "let repo of repos">
+        {{repo.name}}
+      </div> -->
+      <div *ngFor='let repo of repos'>
+        <div class="card">
+          <div class="card-header">
+            <a href="{{repo.html_url}}" class="repoName">{{repo.name}} </a>
+          </div>
+          <div class="card-body text-lead">
+            <p>{{repo.description}}</p>
+          </div>
+          <div class="card-footer">
+            <p>{{repo.created_at | date}}</p>
+            <p>Clone link:"{{repo.clone_url}}"</p>
+          </div>
         </div>
       </div>
-      <div class="panel-body"*ngfor="let repo of repo"></div>
-      <p>
-        {{repo.name}}
-        <a href="{{repo.html}} btn btn sm-btn warning pull-right"> click to view repo</a>
-      </p>
-      <p>
-        {{repo.description}}
-      </p> -->
 
 

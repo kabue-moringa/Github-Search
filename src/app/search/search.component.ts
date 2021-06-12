@@ -10,6 +10,7 @@ export class SearchComponent implements OnInit {
  userName: string;
  search: any;
  getSearch: any;
+ repos: any;
   constructor(private searchService: SearchService) {
     }
     // tslint:disable-next-line:typedef
@@ -19,6 +20,12 @@ export class SearchComponent implements OnInit {
         console.log(search);
         this.search = search;
       });
+
+      this.searchService.getMyRepos().subscribe(repos => {
+        this.repos = repos;
+      });
+
+
 //     this.searchService.getSearchData().subscribe((_repo: any) => {
 //       console.log(_repo);
 

@@ -15,9 +15,14 @@ private clientSecret = '531a54ff180677f631900a77f0caba82a16a31c7';
     this.username = '';
   }
   // tslint:disable-next-line:typedef
-  // getSearchRepo(){
-  //   return this.http.get('https://api.github.com/users/') + this.username;
-  // }
+  getSearchRepo(){
+    return this.http.get('https://api.github.com/users/') + this.username;
+  }
+
+// tslint:disable-next-line:typedef
+getMyRepos(){
+  return this.http.get('https://api.github.com/users/kabue-moringa/repos');
+}
   // // tslint:disable-next-line:typedef
   // tslint:disable-next-line:typedef
   getSearchData(userName: string){
