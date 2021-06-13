@@ -1,0 +1,20 @@
+.card{
+    color: #000000;
+    background-color:#c2bdb0;
+    font-family: 'Acme', sans-serif;
+    font-style:italic;
+    font-size: 22px;
+}
+.card-header {
+    color: greenyellow;
+    font-family: serif;
+    font-size: 30px;
+}
+.heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: 40px;
+color: #6682fc;
+}
+.whole{
+    background-color: #226f4b;
+}

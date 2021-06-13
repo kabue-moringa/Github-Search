@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SearchService } from '../search.service';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,34 +6,16 @@ import { SearchService } from '../search.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
- userName: string;
- search: any;
- getSearch: any;
- repos: any;
-  constructor(private searchService: SearchService) {
-    }
-    // tslint:disable-next-line:typedef
-    userSubmit(){
-      console.log(this.userName);
-      this.searchService.getSearchData(this.userName).subscribe((search: any) => {
-        console.log(search);
-        this.search = search;
-      });
 
-      this.searchService.getMyRepos().subscribe(repos => {
-        this.repos = repos;
-      });
-
-
-//     this.searchService.getSearchData().subscribe((_repo: any) => {
-//       console.log(_repo);
-
-
-  }
-
-// tslint:disable-next-line:variable-name
+  username: string;
+   @Output() emitUserName = new EventEmitter<string>();
+   search(username: string){
+     this.emitUserName.emit(username);
+   }
+  constructor() { }
 
   // tslint:disable-next-line:typedef
-ngOnInit() {
+  ngOnInit() {
   }
+
 }

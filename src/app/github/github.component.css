@@ -1,0 +1,14 @@
+.whole{
+    background-color: #352e92;
+    position:relative;
+
+
+}
+.card{
+   width: 80%;
+}
+.heading{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 40px;
+color: #352e92;
+}

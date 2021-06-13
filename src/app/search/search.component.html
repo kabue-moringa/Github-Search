@@ -1,63 +1,9 @@
-
-<div class="container">
-   <div class="panel panel-default">
-       <div class="search heading">
-         <img src="/git.png" alt="">
-         <h4>GITHUB-SEARCH</h4>
-         <img src="/git.png" alt="">
-         <div id="sub">
-          <form (ngSubmit)='userSubmit()'>
-            <input type="text" name="userName" class="form-control" placeholder="Enter your Username"[(ngModel)]=userName>
-            <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
-          </form>
-         </div>
-
-         <br>
-     </div>
-   </div>
-  </div>
-    <img id="img" src ="{{search.avatar_url}}">
-
-    <div class="panel-body">
-
-<div class="row">
-<div class="col-sm-5">
-<ol class="list-group">
-
-<p class="list-group-item" *ngIf="search.bio">{{search.bio}}</p>
-<p class="list-group-item" *ngIf="search.twitter_username">{{search.twitter_username}}</p>
-<p class="list-group-item" *ngIf="search.location">{{search.location}}</p>
-<p class="list-group-item" *ngIf="search.hireable">{{search.hireable}}</p>
-<p class="list-group-item" *ngIf="search.created_at">{{search.created_at}}</p>
-<p class="list-group-item" *ngIf="search.updated_at">{{search.updated_at}}</p>
-</ol>
-</div>
-</div>
-</div>
-<div class="col-sm-4">
-  <p>
-    <span class="label label-default">{{search.followers}} followers</span><br>
-    <span class="label label-primary">{{search.following}} following</span>
-    <span class="label label-secondary">{{search.public_gist}}</span>
-    <span class="label label-primary">{{search.public_repos}}</span>
-  </p>
-      </div>
-      <!-- <div *ngFor= "let repo of repos">
-        {{repo.name}}
-      </div> -->
-      <div *ngFor='let repo of repos'>
-        <div class="card">
-          <div class="card-header">
-            <a href="{{repo.html_url}}" class="repoName">{{repo.name}} </a>
-          </div>
-          <div class="card-body text-lead">
-            <p>{{repo.description}}</p>
-          </div>
-          <div class="card-footer">
-            <p>{{repo.created_at | date}}</p>
-            <p>Clone link:"{{repo.clone_url}}"</p>
-          </div>
+<div class="container h-100 ">
+    <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+            <input type="text" class="search_input" name="username" [(ngModel)]= "username" placeholder="Search Username...">                                                                                                                                                                                                                                                                                                        
+            <a class="search_icon" (click)="search(username)"><i class="fas fa-search"></i></a>
+           
         </div>
-      </div>
-
-
+    </div>
+</div>

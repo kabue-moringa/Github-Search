@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  IPI: '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'
+  GithubKey:"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"
 };
 
 /*
