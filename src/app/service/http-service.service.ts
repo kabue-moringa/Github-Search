@@ -12,7 +12,7 @@ export class HttpServiceService {
 
   }
 
-  findUser(username: String){
+  findUser(username: string){
     interface ApiResponse{
       login: string;
       html_url: string;

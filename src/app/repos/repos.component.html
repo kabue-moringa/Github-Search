@@ -1,7 +1,7 @@
 <div class="whole">
-    <h2 class="text-center pt-5 heading" appChangeColor>Repo Search</h2>
+    <h2 class="text-center pt-5 heading" appChangeColor>SEARCH REPO'S</h2>
     <app-search (emitUserName) = "findRepo($event)"></app-search>
-    <div class="container-fluid  card-columns pt-5">
+    <div class="container-fluid">
         <div class="card text-black" *ngFor="let repo of myRepos" >
           <div class="card">
             <div class="card-header text-center "><h2 appChangeColor>{{repo.name}}</h2></div>
@@ -10,9 +10,8 @@
               <p>{{repo.language}}</p>
             </div>
             <div class="card-footer flex-footer">
-              <p>Watchers: {{repo.watchers}}</p>
-              <p>Forks: {{repo.forks}}</p>
-              <p>Default branch: {{repo.default_branch}}</p>
+              <p>views: {{repo.viewers}}</p>
+              <p>Forked: {{repo.fork}}</p>
             </div>
           </div>
         </div>

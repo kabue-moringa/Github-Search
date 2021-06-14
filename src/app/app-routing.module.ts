@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {GithubComponent} from './github/github.component';
 import {ReposComponent } from './repos/repos.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './git/not-found.component';
 
 const routes: Routes = [
   {"path": "home", component: GithubComponent},

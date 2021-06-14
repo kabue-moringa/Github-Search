@@ -17,7 +17,7 @@ export class ReposComponent implements OnInit {
       this.myRepos = data;
       console.log(this.myRepos);
 
-    })
+    });
   }
   ngOnInit() {
     this.findRepo('kabue-moringa');

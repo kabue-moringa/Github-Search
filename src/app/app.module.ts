@@ -9,7 +9,7 @@ import { GithubComponent } from './github/github.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { ReposComponent } from './repos/repos.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './git/not-found.component';
 import { DatePipe } from './date.pipe';
 import { ChangeColorDirective } from './change-color.directive';
 
